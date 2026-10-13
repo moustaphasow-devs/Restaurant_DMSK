@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant DMSK - Saveurs de Guinée</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Restaurant DMSK</h1>
+      <p>Les délices traditionnels de Guinée Conakry</p>
+    </header>
+
+    <main>
+      <section class="menu-section">
+        <h2>Nos Plats Traditionnels</h2>
+        <div class="menu-grid" id="menuGrid">
+          <!-- Les plats seront injectés ici par JavaScript -->
+        </div>
+      </section>
+
+      <section class="order-summary">
+        <h2>Votre Commande</h2>
+        <ul id="cartItems">
+          <li>Aucun article sélectionné</li>
+        </ul>
+        <p>Total : <strong id="totalPrice">0</strong> GNF</p>
+      </section>
+    </main>
+    <section class="order-summary">
+      <h2>Votre Commande</h2>
+      <ul id="cartItems">
+        <li>Aucun article sélectionné</li>
+      </ul>
+      <p>Total : <strong id="totalPrice">0</strong> GNF</p>
+
+      <!-- Champs pour que le client saisisse ses informations -->
+      <div style="margin-top: 15px">
+        <input
+          type="text"
+          id="clientName"
+          placeholder="Votre Nom et Prénom"
+          style="
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+          "
+        />
+        <input
+          type="text"
+          id="clientPhone"
+          placeholder="Votre Numéro de Téléphone"
+          style="
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+          "
+        />
+        <button
+          onclick="sendOrderWhatsApp()"
+          style="background-color: #25d366; width: 100%"
+        >
+          Envoyer la commande via WhatsApp
+        </button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
